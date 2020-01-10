@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :atendimentos
   resources :assuntos
   resources :tipo_atendimentos
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'consulta/atendimento', to: 'atendimentos#consulta', as: 'consulta_atendimento'
 end

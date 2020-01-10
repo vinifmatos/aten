@@ -12,6 +12,9 @@ class AtendimentosController < ApplicationController
   def show
   end
 
+  def consulta
+  end
+
   # GET /atendimentos/new
   def new
     @atendimento = Atendimento.new
