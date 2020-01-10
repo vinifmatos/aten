@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @atendimento.numero %>
+</p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @atendimento.ano %>
+</p>
+
+<p>
+  <strong>Assunto:</strong>
+  <%= @atendimento.assunto_id %>
+</p>
+
+<p>
+  <strong>Data abertura:</strong>
+  <%= @atendimento.data_abertura %>
+</p>
+
+<p>
+  <strong>Data finalizacao:</strong>
+  <%= @atendimento.data_finalizacao %>
+</p>
+
+<p>
+  <strong>Data arquivamento:</strong>
+  <%= @atendimento.data_arquivamento %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @atendimento.texto %>
+</p>
+
+<%= link_to 'Edit', edit_atendimento_path(@atendimento) %> |
+<%= link_to 'Back', atendimentos_path %>

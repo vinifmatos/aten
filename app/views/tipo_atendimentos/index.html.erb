@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tipo Atendimentos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Ativo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipo_atendimentos.each do |tipo_atendimento| %>
+      <tr>
+        <td><%= tipo_atendimento.descricao %></td>
+        <td><%= tipo_atendimento.ativo %></td>
+        <td><%= link_to 'Show', tipo_atendimento %></td>
+        <td><%= link_to 'Edit', edit_tipo_atendimento_path(tipo_atendimento) %></td>
+        <td><%= link_to 'Destroy', tipo_atendimento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipo Atendimento', new_tipo_atendimento_path %>

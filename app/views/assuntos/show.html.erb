@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @assunto.descricao %>
+</p>
+
+<p>
+  <strong>Tipo tendimento:</strong>
+  <%= @assunto.tipo_tendimento_id %>
+</p>
+
+<p>
+  <strong>Ativo:</strong>
+  <%= @assunto.ativo %>
+</p>
+
+<%= link_to 'Edit', edit_assunto_path(@assunto) %> |
+<%= link_to 'Back', assuntos_path %>
