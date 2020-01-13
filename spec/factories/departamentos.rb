@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :departamento do
-    descricao { "MyString" }
+    descricao { Faker::Space.galaxy }
     sudordinacao_adm { nil }
-    ativo { false }
+    ativo { true }
   end
 end

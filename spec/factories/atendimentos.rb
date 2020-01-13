@@ -1,11 +1,15 @@
 FactoryBot.define do
   factory :atendimento do
-    numero { 1 }
-    ano { 1 }
-    assunto { nil }
-    data_abertura { "2020-01-10 12:16:07" }
-    data_finalizacao { "2020-01-10 12:16:07" }
-    data_arquivamento { "2020-01-10 12:16:07" }
-    texto { "MyText" }
+    assunto { Assunto.ativos.pluck(:id) }
+    data_abertura { Faker::Time.between(from: Time.now.at_beginning_of_year, to: Time.now.end_of_year) }
+    texto { Faker::Lorem.paragraph_by_chars }
+
+    factory :atendimento_finalizado do
+      data_finalizacao { Faker::Time.between(from: Time.now.at_beginning_of_year, to: Time.now.end_of_year) }
+    end
+
+    factory :atendimento_arquivado do
+      data_arquivamento { Faker::Time.between(from: Time.now.at_beginning_of_year, to: Time.now.end_of_year) }
+    end
   end
 end

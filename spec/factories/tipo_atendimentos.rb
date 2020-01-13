@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :tipo_atendimento do
-    descricao { "MyString" }
-    ativo { false }
+    descricao { Faker::Space.planet }
+    ativo { true }
   end
 end
