@@ -1,4 +1,4 @@
-class AssuntosController < ApplicationController
+class Private::AssuntosController < ApplicationController
   before_action :set_assunto, only: [:show, :edit, :update, :destroy]
 
   # GET /assuntos

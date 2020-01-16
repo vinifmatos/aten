@@ -1,0 +1,12 @@
+<div class="container py-2">
+<div class="card mb-3">
+  <div class="card-header bg-success text-white">Atendimento finalizado com sucesso</div>
+  <div class="card-body">
+    <h5 class="card-title">Informações para consulta</h5>
+    <p class="card-text">
+      <strong>Numero do processo:</strong> <%= "#{@atendimento.numero}/#{@atendimento.ano}" %> <br>
+      <strong>Data de abertura:</strong> <%= l(@atendimento.data_abertura, format: :long) %>
+    </p>
+  </div>
+</div>
+</div>

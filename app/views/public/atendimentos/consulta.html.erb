@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <%= form_tag public_consulta_atendimento_path, remote: true, class: 'form-consulta-processo' do %>
+    <div class="form-group">
+      <%= label_tag :Numero %>
+      <%= number_field_tag :numero, nil, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= label_tag :Ano %>
+      <%= number_field_tag :ano, nil, class: 'form-control' %>
+    </div>
+
+    <%= submit_tag :Pesquisar, class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<div id="resultadoConsulta" class="container"></div>

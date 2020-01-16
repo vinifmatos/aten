@@ -1,0 +1,10 @@
+<div class="card-processo">
+  <% if atendimento.nil? %>
+    Nenhum processo encontrado
+  <% else %>
+    <p>
+      <strong>Número:</strong> <%= "#{atendimento.numero}/#{atendimento.ano}" %> <br>
+      <strong>Data de abertura:</strong> <%= l(atendimento.data_abertura, format: :long) %>
+    </p>
+  <% end %>
+</div>

@@ -1,4 +1,4 @@
-class AtendimentosController < ApplicationController
+class Private::AtendimentosController < ApplicationController
   before_action :set_atendimento, only: [:show, :edit, :update, :destroy]
 
   # GET /atendimentos
@@ -12,32 +12,8 @@ class AtendimentosController < ApplicationController
   def show
   end
 
-  def consulta
-  end
-
-  # GET /atendimentos/new
-  def new
-    @atendimento = Atendimento.new
-  end
-
   # GET /atendimentos/1/edit
   def edit
-  end
-
-  # POST /atendimentos
-  # POST /atendimentos.json
-  def create
-    @atendimento = Atendimento.new(atendimento_params)
-
-    respond_to do |format|
-      if @atendimento.save
-        format.html { redirect_to @atendimento, notice: 'Atendimento was successfully created.' }
-        format.json { render :show, status: :created, location: @atendimento }
-      else
-        format.html { render :new }
-        format.json { render json: @atendimento.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /atendimentos/1

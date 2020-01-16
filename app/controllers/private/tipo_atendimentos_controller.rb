@@ -1,4 +1,4 @@
-class TipoAtendimentosController < ApplicationController
+class Private::TipoAtendimentosController < ApplicationController
   before_action :set_tipo_atendimento, only: [:show, :edit, :update, :destroy]
 
   # GET /tipo_atendimentos
