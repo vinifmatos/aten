@@ -11,3 +11,10 @@ TipoAtendimento.create([
   { descricao: 'Reclamação', ativo: true },
   { descricao: 'Denúncia', ativo: true }
 ])
+
+Usuario.create(
+  username: 'admin',
+  email: 'admin@admin',
+  password: '@admin',
+  password_confirmation: '@admin'
+)

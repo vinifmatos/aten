@@ -1,4 +1,4 @@
-class Private::AtendimentosController < ApplicationController
+class Private::AtendimentosController < Private::PrivateController
   before_action :set_atendimento, only: [:show, :edit, :update, :destroy]
 
   # GET /atendimentos

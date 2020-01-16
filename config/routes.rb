@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  namespace :private do
+    root to: 'home#index'
+  end
+
+  authenticated :usuario do
+    get '/private', to: 'private/home#index', as: :authenticated_root
+  end
+
+  devise_for :usuarios
   root 'home#index'
   namespace :private do
     resources :atendimentos, except: [:new, :create]
