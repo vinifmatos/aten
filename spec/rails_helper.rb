@@ -63,3 +63,5 @@ RSpec.configure do |config|
   
   config.include FactoryBot::Syntax::Methods
 end
+
+Rails.application.load_seed
